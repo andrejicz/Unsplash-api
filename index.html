@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script src="script.js" defer="true"> </script>
-    <title>Unsplash api</title>
+    <title>Unsplash photos</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="script.js" defer="true"></script>
 </head>
+
 <body>
-    
-    <h1>Unsplash photos search</h1>
-    
-     <input type="text" id="search" placeholder="Search">
-     <button onclick = "SearchPhotos()">Search</button>
-   
-     
-     <div id="result">
-        
-     </div>
-    
+
+    <h1>Unsplash photos</h1>
+
+    <div id="loader">
+        <div class="loader-background">
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div class="buttons">
+            <div class="left-buttons"></div>
+            <div class="right-buttons">
+            <button type="button" id="listView" disabled title="Switch to list view"><i class="fa-solid fa-bars"></i></button>
+            <button type="button" id="gridView" title="Switch to grid view"><i class="fa- fa-solid fa-grip"></i></button>
+            </div>
+        </div>
+        <div id="images" class="images-wrapper list-view"></div>
+    </div>
+
     <div id="modal">
         <span id="closeButton">&times;</span>
         <div id="modal-content"></div>
